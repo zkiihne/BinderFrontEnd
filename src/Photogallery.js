@@ -30,7 +30,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
 // const endpoint = "http://localhost:5000/graphql";  
-const endpoint = "http://ec2-18-191-232-219.us-east-2.compute.amazonaws.com/graphql";
+const endpoint = "https://api.beaconbinder.com/graphql";
 
 export default class Photogallery extends React.PureComponent {
     constructor(props){
