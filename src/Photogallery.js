@@ -332,7 +332,7 @@ export default class Photogallery extends React.PureComponent {
           for (i = 0; i < imagearray.length; i++) {
               const imagevalues = imagearray[i].split("[")[1].split("]")[0].split(",")
               console.log(imagevalues)
-              photoarray.push({"src":imagevalues[0].slice(1, -1), "width": parseInt(imagevalues[2]), "height": parseInt(imagevalues[1])})
+              photoarray.push({"src":imagevalues[0].slice(1, -1), "width": parseInt(imagevalues[1]), "height": parseInt(imagevalues[2])})
               imagesonly.push(imagevalues[0].slice(1, -1))
           }
           //loop over images concatting htme to photos, with width and height 0image 1width 2height
