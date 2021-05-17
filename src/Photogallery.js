@@ -666,9 +666,30 @@ export default class Photogallery extends React.PureComponent {
             )
         }}
         else{
-            return(<div><Typography variant="h6" >
-            yolo
-      </Typography></div>
+            return(
+                <div><Typography variant="h3" > FAQ </Typography>
+             <Divider />
+            <Typography variant="h3" > What is the purpose of Beacon Binder? </Typography>
+            <Divider />
+            <Typography variant="h5" > Beacon Binder is a website created to enable people to let people easily look at their NFTs, share them with friends and share them with the world. </Typography>
+            <Divider />
+            <Typography variant="h3" > How do I log into Beacon Binder? </Typography>
+            <Divider />
+            <Typography variant="h5" > You need a MetaMask account. Everything, including your Saved Binder is linked to this account.  </Typography>
+            <Divider />
+            <Typography variant="h3" > Where are the ‘latest’ NFTs sourced from? </Typography>
+            <Divider />
+            <Typography variant="h5" > The latest NFTs are sourced from OpenSea using their API </Typography>
+            <Divider />
+            <Typography variant="h3" > How does the Global Binder work? </Typography>
+            <Divider />
+            <Typography variant="h5" > The Global Binder is composed of all the NFTs that people own and submit to it to show them off to the world </Typography>
+            <Divider />
+            <Typography variant="h3" > Can there be multiple of the same NFT in the Global Binder? </Typography>
+            <Divider />
+            <Typography variant="h5" > Each wallet can submit a particular NFT to the Global Binder once, if it is traded to someone else it can be submitted again. </Typography>
+            <Divider />
+            <Typography variant="h3" > Note: The entire thing is still in development!! </Typography></div>
             )
         }
     }
