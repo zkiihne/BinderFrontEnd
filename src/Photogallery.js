@@ -72,34 +72,15 @@ export default class Photogallery extends React.PureComponent {
 
 
         console.log("here")
-
-        // if (typeof window.ethereum !== 'undefined') {
-        //     window.ethereum
-        //     .request({
-        //         method: 'eth_requestAccounts',
-               
-        //     })
-        //     .then((result) => {
-        //         console.log(result[0]);
-        //     })
-        //     .catch((error) => {
-        //         console.log(error);
-        //     });
-            
-        //   } 
-        
            
         console.log(this.state)
         const data = {
                 optPost: 'userToStat0',
                 message: 'We make a research of fetch'
             };
-        // const endpoint = "http://localhost:5000/graphql";       
-        // const endpoint = "http://ec2-18-191-232-219.us-east-2.compute.amazonaws.com/graphql";   
+
         const setState = this.setState.bind(this);
-        // const query = `query {vp(wa: "0xa679c6154b8d4619af9f83f0bf9a13a680e01ecf"){images, address}}`;
         const query = `query {getglobalgallery{images, address, uri}}`;
-        // const query = `query {test{images, address, uri}}`;
         let postBody = JSON.stringify({ query });   
         console.log(postBody)
         setState({loading: true})
@@ -151,10 +132,7 @@ export default class Photogallery extends React.PureComponent {
     };
 
     handleClose = () => {
-        console.log("cringtttte")
-        // get image from state
-        // use index to get other info
-        // display in card
+
         this.setState({setViewerIsOpen: false, selectedIndex: 0})
         
     };
@@ -201,17 +179,7 @@ export default class Photogallery extends React.PureComponent {
                 body: postBody
             })
         }
-        // else if(this.state.viewerMode === "global"){
-        //     console.log("save to gallery")
-        //     const endpoint = "http://localhost:5000/graphql";       
-        //     const query = '{addtousergallery(us: "'+ maskaddress + '", wa: "'+ contractAddress +'" , tkid: '+ tokenId +')}';
-        //     let postBody = JSON.stringify({ query });   
-        //     const response = fetch(endpoint, {
-        //         method: 'POST',
-        //         headers: { "content-type": "application/json" },
-        //         body: postBody
-        //     })
-        // }
+
         this.setState({selectedValueGlobal: true, maskAddress: maskaddress, globalMode:"removed"})
         console.log(this.state)
     };
@@ -222,8 +190,6 @@ export default class Photogallery extends React.PureComponent {
         // use index to get other info
         // display in card
 
-        
-        console.log("sst", this.state)
         
         var uri = this.state.uris[this.state.selectedIndex]
         var contractAddress = uri.address
@@ -273,7 +239,6 @@ export default class Photogallery extends React.PureComponent {
     };
 
     handleGlobalClose = () => {
-        console.log("cringtttte")
         // get image from state
         // use index to get other info
         // display in card
@@ -282,8 +247,7 @@ export default class Photogallery extends React.PureComponent {
     };
 
     maskClick = async () => {
-        
-        console.log("nicici")
+
         var maskaddress = this.state.maskAddress
         if (typeof window.ethereum !== 'undefined' && maskaddress == null) {
             await window.ethereum
@@ -403,8 +367,7 @@ export default class Photogallery extends React.PureComponent {
     }
 
     randClick = async () => {
-        console.log("sst")
-            
+        
           // const endpoint = "http://localhost:5000/graphql";       
           const setState = this.setState.bind(this);
           setState({ loading: true})
@@ -455,7 +418,6 @@ export default class Photogallery extends React.PureComponent {
     };
 
     userGalleryClick = async () => {
-        console.log("gringo")
         var maskaddress = this.state.maskAddress
         if (typeof window.ethereum !== 'undefined' && maskaddress == null) {
             await window.ethereum
@@ -471,7 +433,6 @@ export default class Photogallery extends React.PureComponent {
                 console.log(error);
             });
         }
-        console.log("ree")
           // const endpoint = "http://localhost:5000/graphql";       
           const setState = this.setState.bind(this);
           setState({ loading: true})
@@ -489,7 +450,6 @@ export default class Photogallery extends React.PureComponent {
             setState({currentAddress: "", addressOwner: "Global", loading: false, loadingFailure: true, failMessage:"Failed to load, no images were returned", faq:false})
         }
         else{
-            console.log("g1")
           const imagearray = responsebody.data.getusergallery[0].images
           const address = responsebody.data.getusergallery[0].address
           const name = responsebody.data.getusergallery[0].name
@@ -524,7 +484,6 @@ export default class Photogallery extends React.PureComponent {
 
 
     inputenter = async () => {
-        console.log("nicici")
         var maskaddress = this.state.currentAddress
         
           // const endpoint = "http://localhost:5000/graphql";       
