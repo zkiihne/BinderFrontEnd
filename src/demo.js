@@ -37,14 +37,6 @@ export default function SimpleDialog(props) {
     imageheight = imageheight*3/4
   }
  
-  console.log("junk", imagewidth, imageheight, mode)
-  // if(imagewidth > width){
-  //   imagewidth = imagewidth*3/4
-  //   imageheight = imageheight*3/4
-  // }
-  // if(imageheight > height){
-  //   imagewidth = imagewidth*3/4
-  // }
   var useStyles = makeStyles({
     avatar: {
       backgroundColor: blue[100],
@@ -128,35 +120,9 @@ export default function SimpleDialog(props) {
     </Dialog>
   );
 }
-// "https://source.unsplash.com/iecJiKe_RNg/600x799"
 SimpleDialog.propTypes = {
   onClose: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired,
   selectedValue: PropTypes.string.isRequired,
 
 };
-
-// export default function SimpleDialogDemo() {
-//   const [open, setOpen] = React.useState(false);
-//   const [selectedValue, setSelectedValue] = React.useState(emails[1]);
-
-//   const handleClickOpen = () => {
-//     setOpen(true);
-//   };
-
-//   const handleClose = (value) => {
-//     setOpen(false);
-//     setSelectedValue(value);
-//   };
-
-//   return (
-//     <div>
-//       <Typography variant="subtitle1">Selected: {selectedValue}</Typography>
-//       <br />
-//       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-//         Open simple dialog
-//       </Button>
-//       <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} />
-//     </div>
-//   );
-// }
